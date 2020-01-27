@@ -2,13 +2,21 @@
   "name": "twitterbot-ui",
   "version": "1.0.0",
   "description": "Twitter Bot - NodeJS",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=Icon/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . Athena --overwrite --asar=true --platform=win32 --arch=ia32 --icon=Icon/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Athena by Aquaco\"",
+    "package-linux": "electron-packager . Athena --overwrite --asar=true --platform=linux --arch=x64 --icon=Icon/icon.png --prune=true --out=release-builds"
+  },
   "author": "Wilbur Shearer <will@basilisk-design.co.uk>",
   "dependencies": {
+    "electron-localshortcut": "^3.2.1",
+    "electron-settings": "^3.2.0",
     "twit": "*"
+
   },
-  "scripts": {
-    "start": "node main.js"
-  },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wilburforce83/twitterbotGUI.git"
@@ -19,7 +27,7 @@
     "url": "https://github.com/wilburforce83/twitterbotGUI/issues"
   },
   "homepage": "https://github.com/wilburforce83/twitterbotGUI#readme",
-  "main": "main.js",
+
   "directories": {
     "lib": "lib"
   },
@@ -28,6 +36,8 @@
     "bot"
   ],
   "devDependencies": {
-    "electron": "^7.1.10"
+    "electron": "^7.1.10",
+    "electron-builder": "^20.39.0",
+    "electron-packager": "^13.1.1"
   }
 }
