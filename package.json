@@ -1,0 +1,30 @@
+{
+  "name": "twtterbot-ui",
+  "version": "1.0.0",
+  "description": "Twitter Bot - NodeJS",
+  "author": "Wilbur Shearer <will@basilisk-design.co.uk>",
+  "dependencies": {
+    "twit": "*"
+  },
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wilburforce83/twitterbotGUI"
+  },
+  "analyze": true,
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wilburforce83/twitterbotGUI/issues"
+  },
+  "homepage": "https://github.com/wilburforce83/twitterbotGUI#readme",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "twitter",
+    "bot"
+  ]
+}
